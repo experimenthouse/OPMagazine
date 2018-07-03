@@ -29,13 +29,15 @@ plugins:
 collections:
   columns:
     output: true
-    permalink: /columns/:title/
+    permalink: /columns/:slug/
   sections:
     output: true
-    permalink: /sections/:title/
+    permalink: /sections/:slug/
   topics:
     output: true
-    permalink: /topics/:title/
+    permalink: /topics/:slug/
+
+permalink: /:year/:month/:day/:slug:output_ext
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
