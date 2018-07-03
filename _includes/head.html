@@ -3,9 +3,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
+  {% if page.title %}
+    <title>OPM | {{ page.title }}</title>
+    {% if page.layout == "post" %}
+      <meta property="og:title" content="{{ page.title }}"/>
+    {% else %}
+      <meta property="og:title" content="OPM | {{ page.title }}"/>
+    {% endif %}
+  {% else %}
+    <title>OPMagazine</title>
+    <meta property="og:title" content="OPMagazine"/>
+  {% endif %}
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="{{ page.url }}"/>
+  {% if page.image %}
+    <meta property="og:image" content="{{ site.baseurl }}/assets/images/{{ page.image }}"/>
+  {% else %}
+    <meta property="og:image" content="{{ site.baseurl }}/assets/branding/logo.png"/>
+  {% endif %}
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
