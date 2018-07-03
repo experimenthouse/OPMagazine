@@ -18,7 +18,7 @@ email: contact@opmagazine.com
 description: >- # this means to ignore newlines until "baseurl:"
   Think big with news you can trust
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://opmagazine.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://opmagazine.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: OPMGNews
 facebook_username: olbrychtpalmermediagroup
 
