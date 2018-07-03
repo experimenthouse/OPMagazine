@@ -1,0 +1,13 @@
+{%- for author in article.authors -%}
+  {%- if article.authors.size > 1 -%}
+    {%- if forloop.first == true -%}
+      {{ author }}
+    {%- elsif forloop.last == true %}
+      and {{ author -}}
+    {%- else -%}
+      , {{ author }}
+    {%- endif -%}
+  {%- else -%}
+    {{- author -}}
+  {%- endif -%}
+{%- endfor -%}

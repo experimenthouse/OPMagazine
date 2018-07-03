@@ -1,0 +1,38 @@
+a {
+  color: $brand-color-dark;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $brand-color-light;
+}
+
+.section-header {
+  text-transform: uppercase;
+  color: $brand-color-dark;
+  padding: 0;
+  margin: 0;
+}
+
+.article-meta {
+  color: $grey-color;
+  margin: 0;
+  padding: 0;
+}
+
+.article-meta-small {
+  font-size: $small-font-size;
+}
+
+.article-meta-medium {
+  margin-bottom: $small-spacing-unit;
+}
+
+.article-meta-large {
+  color: $grey-color;
+  margin-bottom: $small-spacing-unit;
+}
+
+.preview-link {
+  color: #000000;
+}

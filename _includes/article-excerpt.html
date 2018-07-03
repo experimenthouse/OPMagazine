@@ -1,0 +1,1 @@
+{{ article.excerpt | replace: '<p>', '' | replace: '</p>', '' | truncatewords: 75 | replace "...", "" }} <a href="{{ article.url }}">Read more</a>

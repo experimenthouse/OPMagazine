@@ -1,0 +1,18 @@
+<div class="home-column home-column-right">
+  <h2 class="section-header">Opinion</h2>
+  <ul class="article-list">
+    {% for article in site.categories["Opinion"] | limit: 5 %}
+      <li>{% include article-preview-small.html %}</li>
+    {% endfor %}
+    <li><a href="{{ site.baseurl }}/sections/opinion/">► More articles</a></li>
+  </ul>
+  <div class="home-subcolumn">
+    <h2 class="section-header">In Stereo</h2>
+    <ul class="article-list">
+      {% for article in site.categories["In Stereo"] | limit: 1 %}
+        <li>{% include article-preview-subcolumn.html %}</li>
+      {% endfor %}
+      <li><a href="{{ site.baseurl }}/columns/in-stereo/">► More articles</a></li>
+    </ul>
+  </div>
+</div>

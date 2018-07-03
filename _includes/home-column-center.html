@@ -1,0 +1,16 @@
+<div class="home-column home-column-center">
+  <h2 class="section-header">Features</h2>
+  <ul class="article-list">
+    {% for article in site.categories["Features"] | limit: 1 %}
+      <li>
+        {% include article-preview-large.html %}
+      </li>
+    {% endfor %}
+    {% for article in site.categories["Features"] | offset: 1 | limit: 4 %}
+      <li>
+        {% include article-preview-medium.html %}
+      </li>
+    {% endfor %}
+    <li><a href="{{ site.baseurl }}/sections/features/">► More articles</a></li>
+  </ul>
+</div>

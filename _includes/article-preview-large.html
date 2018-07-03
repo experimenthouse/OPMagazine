@@ -1,0 +1,6 @@
+<img class="preview-image preview-image-large" src="{{ site.url }}/assets/images/{{ article.image }}"/>
+<p class="article-meta article-meta-large">
+  {{ article.date | date: "%A %-d %B %Y" }} • {% include article-preview-authors.html %}
+</p>
+<h2 class="preview-title preview-title-large">{{ article.title }}</h2>
+<p>{% include article-excerpt.html %}</p>

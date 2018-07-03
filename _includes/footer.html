@@ -1,0 +1,60 @@
+<footer class="site-footer">
+  <div class="wrapper flexbox">
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <ul class="footer-list">
+        <li>
+          <a class="social-link" href="https://twitter.com/{{ site.twitter_username }}">
+            <span class="fa-stack">
+              <i class="social-icon fa fa-twitter fa-stack-1x"></i>
+            </span> Twitter
+          </a>
+        </li>
+        <li>
+          <a class="social-link" href="https://facebook.com/{{ site.facebook_username }}">
+            <span class="fa-stack">
+              <i class="social-icon fa fa-facebook fa-stack-1x"></i>
+            </span> Facebook
+          </a>
+        </li>
+        <li>
+          <a class="social-link" href="mailto:{{ site.email }}">
+            <span class="fa-stack">
+              <i class="social-icon fa fa-envelope fa-stack-1x"></i>
+            </span> Email
+          </a>
+        </li>
+      </ul>
+      <h3>Info</h3>
+      <ul class="footer-list">
+        {% for page in site.pages %}
+          {% if page.info == true %}
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Sections</h3>
+      <ul class="footer-list">
+        {% for page in site.sections %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <h3>Columns</h3>
+      <ul class="footer-list">
+        {% for page in site.columns %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Topics</h3>
+      <ul class="footer-list">
+        {% for page in site.topics %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</footer>

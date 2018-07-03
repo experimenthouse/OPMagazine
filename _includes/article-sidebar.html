@@ -1,0 +1,25 @@
+<div class="article-sidebar">
+  <p class="article-meta article-meta-sidebar">{{ page.date | date: "%A %-d %B %Y" }}</p>
+  <p class="article-meta article-meta-sidebar">
+    {% if page.categories contains "The Bugle" %}
+      <span class="article-bugle-tag">The Bugle</span>
+    {% else %}
+    <span class="article-category-tag">
+      {% if page.categories contains "Hot off the Press" %}
+        Hot off the Press
+      {% elsif page.categories contains "Features" %}
+        Features
+      {% elsif page.categories contains "Opinion" %}
+        Opinion
+      {% elsif page.categories contains "In Stereo" %}
+        In Stereo
+      {% endif %}
+    </span>
+  {% endif %}
+  </p>
+  <ul class="author-list author-list-article">
+    {% for author in page.authors %}
+      <li>{% include author-article.html %}</li>
+    {% endfor %}
+  </ul>
+</div>

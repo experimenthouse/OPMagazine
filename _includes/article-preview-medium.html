@@ -1,0 +1,11 @@
+<div class="flexbox">
+  <img class="preview-image preview-image-medium" src="{{ site.url }}/assets/images/{{ article.image }}"/>
+  <div>
+    <p class="article-meta article-meta-medium">
+      {{ article.date | date: "%A %-d %B %Y"}} •
+      {% include article-preview-authors.html %}
+    </p>
+    <h3 class="preview-title preview-title-medium">{{ article.title }}</h3>
+    <p>{% include article-excerpt.html %}</p>
+  </div>
+</div>

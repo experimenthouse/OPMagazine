@@ -1,0 +1,7 @@
+<h2>The Team</h2>
+<ul class="author-list">
+  {% for contributor in site.data.contributors %}
+    {% assign author = contributor[0] %}
+    <li>{% include author-article.html %}</li>
+  {% endfor %}
+</ul>

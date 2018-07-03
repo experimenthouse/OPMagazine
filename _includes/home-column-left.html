@@ -1,0 +1,11 @@
+<div class="home-column home-column-left">
+  <h2 class="section-header">Hot off the Press</h2>
+  <ul class="article-list">
+    {% for article in site.categories["Hot off the Press"] | limit: 10 %}
+      <li>
+        {% include article-preview-small.html %}
+      </li>
+    {% endfor %}
+    <li><a href="{{ site.baseurl }}/sections/hot-off-the-press/">► More articles</a></li>
+  </ul>
+</div>

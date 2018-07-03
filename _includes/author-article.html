@@ -1,0 +1,28 @@
+<div class="flexbox">
+  <img class="preview-image author-image-small" src="{{ site.url }}/assets/contributors/{{ author | downcase | replace: " ", "-" }}.jpg"/>
+  <div>
+    <p class="author-meta"><strong>{{ author }}</strong></p>
+    <p class="author-meta">{{ site.data.contributors[author].position }}</p>
+    <div class="author-social">
+      {% if site.data.contributors[author].twitter %}
+        {% assign twitter = site.data.contributors[author].twitter | prepend: "https://twitter.com/" %}
+        <a class="social-link fa-stack" href="{{ twitter }}">
+          <i class="social-icon fa fa-twitter fa-stack-1x"></i>
+        </a>
+      {% endif %}
+      {% if site.data.contributors[author].email %}
+        {% if site.data.contributors[author].position == "Columnist" %}
+          {% assign email = site.data.contributors[author].email %}
+        {% else %}
+          {% assign email = site.data.contributors[author].email | append: "@opmagazine.com" %}
+        {% endif %}
+        <a class="social-link fa-stack" href="mailto:{{ email }}">
+          <i class="social-icon fa fa-envelope fa-stack-1x"></i>
+        </a>
+      {% endif %}
+      {% if page.title == "About" %}
+        <p>{{ site.data.contributors[author].bio | replace: "OPMagazine", "<em>OPMagazine</em>" }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
