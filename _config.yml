@@ -37,7 +37,7 @@ collections:
     output: true
     permalink: /topics/:slug/
 
-permalink: /:year/:month/:day/:slug:output_ext
+permalink: /:year/:month/:day/:slug/
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
