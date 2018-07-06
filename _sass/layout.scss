@@ -337,7 +337,7 @@ footer h3 {
   .article-sidebar {
     border: 0;
     border-left: $smaller-spacing-unit solid $brand-color-light;
-    padding-left: $spacing-unit;
+    padding: 0;
     min-width: 100%;
     max-width: 100%;
   }
