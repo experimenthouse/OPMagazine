@@ -312,6 +312,11 @@ footer h3 {
 
 @media screen and (max-width: 600px) {
 
+  .author-meta {
+    margin: 0 0 0 0;
+    white-space: wrap;
+  }
+
   .article-title-mobile {
     display: block;
   }
