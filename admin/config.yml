@@ -16,7 +16,11 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish date", name: "date", widget: "datetime"}
       - {label: "Author(s)", name: "authors", widget: "list"}
-      - {label: "Categories", name: "categories", widget: "list"}
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        field:
+          - {label: "Category", widget: "string"}
       - {label: "Featured image", name: "image", widget: "image"}
       - {label: "Image credit", name: "image-credit", widget: "string"}
       - {label: "Image source (URL)", name: "image-source", widget: "string"}
