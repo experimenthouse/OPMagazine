@@ -9,7 +9,7 @@ layout: default
     <div>
       <h1 class="page-title article-title-desktop">{{ page.title }}</h1>
       {% if page.image %}
-        <img class="featured-image" src="{{ site.url }}/assets/images/{{ page.image }}"/>
+        <img class="featured-image" src="{{ site.url }}{{ page.image }}"/>
         {% if page.image-credit %}
           <p class="article-meta article-meta-image">
             Image credit: {{ page.image-credit }}
