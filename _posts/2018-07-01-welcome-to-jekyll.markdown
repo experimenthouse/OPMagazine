@@ -4,7 +4,7 @@ title:  "Welcome to Jekyll!"
 date:   2018-07-01 17:57:23 +1000
 categories:
 - "Hot off the Press"
-image: agung.jpg
+image: /assets/images/agung.jpg
 authors:
 - Joseph Olbrycht-Palmer
 - Elise Sherry

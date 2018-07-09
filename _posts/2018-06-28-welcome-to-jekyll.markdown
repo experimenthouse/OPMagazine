@@ -4,7 +4,7 @@ title:  "Welcome to Jekyll!"
 date:   2018-06-28 17:57:23 +1000
 categories:
 - "In Stereo"
-image: agung.jpg
+image: /assets/images/agung.jpg
 authors:
 - Sam Elliott
 - Elise Sherry
