@@ -7,3 +7,15 @@ layout: default
   {%- include home-column-center.html -%}
   {%- include home-column-right.html -%}
 </div>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
