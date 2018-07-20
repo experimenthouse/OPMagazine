@@ -17,10 +17,17 @@
     </span>
   {% endif %}
   </p>
-  <p>
+  <p class="article-meta article-meta-sidebar">
+    <i class="fa fa-clock-o" aria-hidden="true"></i>
     {% assign words = post.content | size %}
     {% assign minutes = words | divided_by: 200 %}
-    {{ minutes | round }}
+    {% assign minutes_rounded = minutes | round %}
+    {% if minutes_rounded < 1 %}
+      1
+    {% else %}
+      {{ minutes | round }}
+    {% endif %}
+    minute read
   </p>
   <ul class="author-list author-list-article">
     {% for author in page.authors %}
