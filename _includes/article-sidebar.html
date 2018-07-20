@@ -19,7 +19,7 @@
   </p>
   <p class="article-meta article-meta-sidebar">
     <i class="fa fa-clock-o" aria-hidden="true"></i>
-    {% assign words = page.content | size %}
+    {% assign words = page.content | number_of_words %}
     {% assign minutes = words | divided_by: 200 %}
     {% assign minutes_rounded = minutes | round %}
     Words: {{ words }}<br>
