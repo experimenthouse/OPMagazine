@@ -22,9 +22,12 @@
     {% assign words = page.content | number_of_words %}
     {% assign minutes = words | divided_by: 200 %}
     {% assign minutes_rounded = minutes | round %}
-    Words: {{ words }}<br>
-    Minutes: {{ minutes }}<br>
-    Rounded: {{ minutes_rounded }}<br>
+    {% if minutes_rounded < 1 %}
+      1
+    {% else %}
+      {{ minutes_rounded }}
+    {% endif %}
+    minute read
   </p>
   <ul class="author-list author-list-article">
     {% for author in page.authors %}
