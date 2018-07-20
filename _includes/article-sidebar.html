@@ -17,6 +17,11 @@
     </span>
   {% endif %}
   </p>
+  <p>
+    {% assign words = post.content | size %}
+    {% assign minutes = words | divided_by: 200 %}
+    {{ minutes | round }}
+  </p>
   <ul class="author-list author-list-article">
     {% for author in page.authors %}
       <li>{% include author-article.html %}</li>
